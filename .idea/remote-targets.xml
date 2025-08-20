@@ -18,6 +18,21 @@
           </config>
         </ContributedStateBase>
       </target>
+      <target name="WSL2" type="wsl" uuid="977fc7fe-8f53-4738-8194-a117f8c9dca4">
+        <config>
+          <option name="distributionMsId" value="Ubuntu" />
+        </config>
+        <ContributedStateBase type="MavenRuntime">
+          <config>
+            <option name="homePath" value="/usr/share/maven" />
+          </config>
+        </ContributedStateBase>
+        <ContributedStateBase type="JavaLanguageRuntime">
+          <config>
+            <option name="homePath" value="$PROJECT_DIR$/../../../.sdkman/candidates/java/21.0.8-tem" />
+          </config>
+        </ContributedStateBase>
+      </target>
     </targets>
   </component>
 </project>
