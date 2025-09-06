@@ -4,10 +4,10 @@ import lombok.ToString;
 
 @ToString
 public class User {
-  private String name;
-  private String email;
-  private String phone;
-  private int age;
+  private final String name;
+  private final String email;
+  private final String phone;
+  private final int age;
 
   private User(Builder builder) {
     this.name = builder.name;

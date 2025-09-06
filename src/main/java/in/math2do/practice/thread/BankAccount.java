@@ -31,20 +31,17 @@ public class BankAccount {
     }
   }
 
-  public int checkBalance() {
+  public void checkBalance() {
     System.out.println(Thread.currentThread().getName() + " attempting to get balance ");
     readLock.lock();
     try {
       Thread.sleep(4000);
       System.out.println(Thread.currentThread().getName() + " fetched balance: " + this.balance);
-      return this.balance;
     } catch (InterruptedException e) {
       Thread.currentThread().interrupt();
     } finally {
       readLock.unlock();
     }
-    // When error happens
-    return 0;
   }
 
   public static void main() throws RuntimeException {
