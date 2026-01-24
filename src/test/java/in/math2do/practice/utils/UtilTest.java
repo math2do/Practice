@@ -12,14 +12,14 @@ import static org.mockito.Mockito.*;
 
 
 @DisplayName("Testing the util class")
-public class UtilTest {
+class UtilTest {
   @BeforeAll
-  public static void beforeAll() {
+  static void beforeAll() {
     System.out.println("before all");
   }
 
   @AfterAll
-  public static void afterAll() {
+  static void afterAll() {
     System.out.println("after all");
   }
 
@@ -35,20 +35,20 @@ public class UtilTest {
   @ParameterizedTest
   @DisplayName("Adding two numbers with test parameterized")
   @MethodSource("testTable")
-  public void TestAddition(int a, int b, int expected) {
+  void TestAddition(int a, int b, int expected) {
     int actualResult = Util.add(a, b);
     Assertions.assertEquals(expected, actualResult);
   }
 
   @Test
   @DisplayName("Adding two numbers usual way")
-  public void TestAdditionNormal() {
+  void TestAdditionNormal() {
     int actualResult = Util.add(1, 2);
     Assertions.assertEquals(3, actualResult);
   }
 
   @Test
-  public void TestMocking() {
+  void TestMocking() {
     List<String> mockedList = mock();
     mockedList.add("first-element");
     mockedList.add("second-element");
