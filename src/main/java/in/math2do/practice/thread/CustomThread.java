@@ -1,7 +1,7 @@
 package in.math2do.practice.thread;
 
 public class CustomThread extends Thread {
-  private Counter counter;
+  private final Counter counter;
 
   public CustomThread(Counter counter) {
     this.counter = counter;
